@@ -89,7 +89,7 @@ average.print() // Output: 3.5
 ~~~~
 Using tf.tidy will help prevent memory leaks in your application. It can also be used to more carefully control when memory is reclaimed.
 
- ######### Two important notes
+######### Two important notes
 1) The function passed to tf.tidy should be synchronous and also not return a Promise. We suggest keeping code that updates the UI or makes remote requests outside of tf.tidy.
 
 2) tf.tidy will not clean up variables. Variables typically last through the entire lifecycle of a machine learning model, so TensorFlow.js doesn't clean them up even if they are created in a tidy; however, you can call dispose on them manually.
